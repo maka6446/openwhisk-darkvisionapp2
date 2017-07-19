@@ -20,6 +20,7 @@ const mkdirp = require('mkdirp');
 const async = require('async');
 const auth = require('http-auth');
 const compression = require('compression');
+const basicAuth = require('basic-auth-connect');
 
 const app = express();
 app.use(compression());
@@ -637,6 +638,7 @@ app.get('/api/status', (req, res) => {
 });
 
 // serve the files out of ./public as our main files
+app.use(basicAuth('nikkei_ibm_dvtest','nikkei_ibm_passw0rd'));
 app.use(express.static(require('path').join(__dirname, '/public')));
 
 // start server on the specified port and binding host
