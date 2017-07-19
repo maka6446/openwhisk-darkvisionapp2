@@ -638,7 +638,7 @@ app.get('/api/status', (req, res) => {
 });
 
 // serve the files out of ./public as our main files
-app.use(basicAuth('nikkei_ibm_dvtest','nikkei_ibm_passw0rd'));
+app.use(basicAuth('bsntv_ibm_dvtest','bsntv_ibm_passw0rd'));
 app.use(express.static(require('path').join(__dirname, '/public')));
 
 // start server on the specified port and binding host
