@@ -4,5 +4,6 @@ applications:
 #  - objectstorage-for-darkvision
   name: openwhisk-darkvision
   memory: 256M
+  disk_quota: 2048M
   instances: 1
   random-route: true
